@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-void test();
+void CompilerVersion();
 
 int main()
 {
 	printf("Hello, World !!\n");
-	test();
+	CompilerVersion();
 	return 0;
 }
 
