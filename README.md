@@ -1,0 +1,2 @@
+# cmake-scratch
+Cmake Templates
