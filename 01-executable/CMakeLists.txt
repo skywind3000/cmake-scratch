@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(demo)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 #----------------------------------------------------------------------
 # source list
