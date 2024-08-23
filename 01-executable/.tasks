@@ -2,20 +2,22 @@
 # see: https://github.com/skywind3000/asynctasks.vim/wiki/Task-Config
 
 [project-init]
+precmd/win32=call d:\dev\vc90\vcvarsall.bat
 command=rm -rf build && cmake -B build
-command/win32=rd /s /q build 2> nul & cmake -B build -G "NMake Makefile"
+command/win32=rd /s /q build 2> nul & cmake -B build -G "NMake Makefiles"
 cwd=<root>
 save=2
 
 [project-build]
+precmd=call d:\dev\vc90\vcvarsall.bat
 command=cmake --build build
 cwd=<root>
 errorformat=%. %#--> %f:%l:%c,%f(%l):%m,%f:%l:%c:%m,%f:%l:%m
 save=2
 
 [project-run]
-command=build/$(VIM_PRONAME)
-command/win32=build\$(VIM_PRONAME)
+command=build/demo
+command/win32=build\demo
 cwd=<root>
 output=terminal
 
